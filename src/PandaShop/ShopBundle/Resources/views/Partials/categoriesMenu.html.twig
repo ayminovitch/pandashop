@@ -1,0 +1,6 @@
+{% trans_default_domain 'ShopBundle' %}
+
+    {% for category in categories %}
+    <li class="menu-item"><a title="{{ category.name }}" href="{{ path('category', {'slug' : category.slug}) }}">{{ category.name }}</a></li>
+    {% endfor %}
+
