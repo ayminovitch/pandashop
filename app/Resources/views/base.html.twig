@@ -9,13 +9,8 @@
     <meta name="author" content="">
     <!--    <link rel="icon" href="../favicon.ico">-->
     <title>{% block title %}Welcome!{% endblock %}</title>
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.min.css') }}" media="all" />
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/font-awesome.min.css') }}" media="all" />
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/animate.min.css') }}" media="all" />
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/font-electro.css') }}" media="all" />
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/owl-carousel.css') }}" media="all" />
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}" media="all" />
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/colors/yellow.css') }}" media="all" />
+    <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
+    
     {% block stylesheets %}{% endblock %}
     {% block header_javascripts %}{% endblock %}
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
@@ -26,24 +21,15 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body class="home page-template page-template-template-homepage-v3 full-color-background">
-
-    {% block body %}{% endblock %}
-
-    {% block javascripts %}
+<body class="boxed-layout">
+<div class="wrapper">
+{% block body %}{% endblock %}
+{% block javascripts %}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="{{ asset('assets/js/ie10-viewport-bug-workaround.js') }}"></script>
-    <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
-    <script src="{{ asset('assets/js/tether.min.js') }}"></script>
     <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('assets/js/bootstrap-hover-dropdown.min.js') }}"></script>
-    <script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>
-    <script src="{{ asset('assets/js/echo.min.js') }}"></script>
-    <script src="{{ asset('assets/js/wow.min.js') }}"></script>
-    <script src="{{ asset('assets/js/jquery.easing.min.js') }}"></script>
-    <script src="{{ asset('assets/js/jquery.waypoints.min.js') }}"></script>
-    <script src="{{ asset('assets/js/electro.js') }}"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="{{ asset('assets/js/ie10-viewport-bug-workaround.js') }}"></script>
 {% endblock %}
+</div>
 </body>
 </html>

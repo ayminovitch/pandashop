@@ -1,5 +1,5 @@
 {% trans_default_domain 'ShopBundle' %}
-<div class="item col-md-4 col-lg-3">
+{# <div class="item col-md-4 col-lg-3">
     <div class="thumbnail">
         <a href="{{ path('show_product', {'slug' : product.slug}) }}">
             {% if product.images|length %}
@@ -29,5 +29,38 @@
             </p>
             <a class="btn btn-success addtocart-btn" href="#">{{ 'cart.addtocart'|trans }}</a>
         </div>
+    </div>
+</div> #}
+
+<div class="col-xs-12">
+    <div class="product-item product-item-2 id-row" data-id="{{ product.id }}">
+        <div class="product-img">
+            <a href="{{ path('show_product', {'slug' : product.slug}) }}">
+            {% if product.images|length %}
+                <img src="{{ asset ('uploads/gallery/' ~ product.images.first().path) }}" alt="{{ product.name }}"/>
+            {% else %}
+                <img src="{{ asset ('assets/shop/img/product-2/1.jpg') }}" alt="{{ product.name }}"/>
+            {% endif %}
+            </a>
+        </div>
+        <div class="product-info">
+            <h6 class="product-title">
+                <a href="{{ path('show_product', {'slug' : product.slug}) }}">{{ product.name }}</a>
+            </h6>
+            <h6 class="brand-name">{{ product.category }}</h6>
+            <h3 class="pro-price">$ {{ product.price }}</h3>
+        </div>
+        <ul class="action-button">
+            <li>
+                <a href="#" title="Wishlist"><i class="zmdi zmdi-favorite"></i></a>
+            </li>
+            <li>
+                <a href="#" data-toggle="modal"  data-target="#productModal" title="Quickview"><i class="zmdi zmdi-zoom-in"></i></a>
+            </li>
+
+            <li>
+                <a href="#" title="Add to cart"><i class="zmdi zmdi-shopping-cart-plus addtocart-btn"></i></a>
+            </li>
+        </ul>
     </div>
 </div>

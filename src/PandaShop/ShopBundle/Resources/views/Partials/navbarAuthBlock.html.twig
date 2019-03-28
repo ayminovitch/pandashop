@@ -2,7 +2,7 @@
 
 {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
     {% if is_granted('ROLE_ADMIN') %}
-        <li class="menu-item animate-dropdown"> <i class="ec ec-user"></i>
+        <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                aria-expanded="true">
                 {{ 'layout.navbar.admin'|trans }} <span class="caret"></span>
@@ -13,7 +13,7 @@
             </ul>
         </li>
     {% else %}
-        <li class="menu-item animate-dropdown"> <i class="ec ec-user"></i>
+        <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                aria-expanded="true">
                 {{ 'layout.navbar.loggedas'|trans }} {{ app.user.username }} <span class="caret"></span>
@@ -24,7 +24,7 @@
         </li>
     {% endif %}
 {% else %}
-    <li class="menu-item animate-dropdown"> <i class="ec ec-user"></i>
+    <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
            aria-expanded="true">
             {{ 'layout.navbar.login'|trans }} <span class="caret"></span>

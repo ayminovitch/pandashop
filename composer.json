@@ -1,6 +1,6 @@
 {
     "description": "Sujet Symfony Phone Store",
-    "name": "aymenhammami/PandaShop",
+    "name": "aymenhammami/panda-shop",
     "license": "MIT",
     "type": "project",
     "authors": [
@@ -41,7 +41,8 @@
         "liip/imagine-bundle": "^1.5",
         "knplabs/knp-paginator-bundle": "2.5.1",
         "presta/sitemap-bundle": "1.4.2",
-        "hwi/oauth-bundle": "0.5.3"
+        "hwi/oauth-bundle": "0.5.3",
+        "twig/extensions": "^1.5"
     },
     "require-dev": {
         "sensio/generator-bundle": "^3.0",

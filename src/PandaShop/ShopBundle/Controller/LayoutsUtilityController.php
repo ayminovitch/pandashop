@@ -23,24 +23,6 @@ class LayoutsUtilityController extends Controller
             ['categories' => $categories]);
     }
 
-
-    /**
-     * render categories search
-     */
-    public function categoriesSearchAction()
-    {
-        $em = $this->getDoctrine()->getManager();
-        $categoryRepository = $em->getRepository('ShopBundle:Category');
-
-        $settings = $this->get('app.site_settings');
-        $showEmpty = $settings->getShowEmptyCategories();
-
-        $categories = $categoryRepository->getAllCategories($showEmpty);
-
-        return $this->render('ShopBundle:Partials:categoriesSearch.html.twig',
-            ['categories' => $categories]);
-    }
-
     /**
      * render manufacturers menu
      */

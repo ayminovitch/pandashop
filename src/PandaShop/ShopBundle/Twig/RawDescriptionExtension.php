@@ -15,4 +15,5 @@ class RawDescriptionExtension extends \Twig_Extension
     {
         return $descr;
     }
+    
 }
